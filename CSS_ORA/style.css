@@ -1,0 +1,79 @@
+.maincontainer {
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+}
+
+.header-title {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 14;
+   color: #8c1515;
+}
+
+.section-hr {
+   line-height: 4px;
+   border: 3px solid #FF9900;
+   width: 80%;
+   margin-left: 0%;
+}
+
+.grid-container-2c {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   line-height: 12%;
+}
+
+.grid-container-with-image {
+   display: grid;
+   grid-template-columns: 3fr 4fr 4fr;
+}
+
+.header-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.info-row {
+   display: flex;
+   flex-direction: row;
+   margin-top: 0%;
+   margin-bottom: 0%;
+   min-height: 10%;
+}
+
+.profile-image {
+   width: 41%;
+   align-self: center;
+   box-shadow: 10px 10px lightblue;
+   justify-self: center;
+   margin-top: 5%;
+}
+
+.column {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding-left: 15px;
+   padding-right: 15px;
+   overflow: scroll;
+}
+
+.strong-text {
+   font-size: 1.3em;
+   font-weight: 700;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+}
+
+.normal-text {
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 1.3em;
+}
+
+.button-edit {
+   margin-left: 1%;
+   background: white;
+   background-blend-mode: luminosity;
+}

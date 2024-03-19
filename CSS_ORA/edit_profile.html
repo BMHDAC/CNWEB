@@ -1,8 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="header-container">
+        <h3 class="header-title">CAP NHAP THONG TIN CA NHAN</h3>
+      </div>
+      <hr />
+    </section>
+    <section>
+      <div class="maincontainer">
+        <h4 class="header-title">Thong tin ca nhan</h4>
+        <hr style="line-height: 1px; width: 100%" />
+        <form>
+          <div class="form-row">
+            <label for="fullname">Ho va ten:&emsp;</label>
+            <input type="text" id="fullname" />
+          </div>
 
-<head>
-   <link rel="stylesheet" href="style.css">
-</head>
+          <div class="form-row-radio">
+            <div style="flex: 1">
+              <label for="gender">Gioi tinh:&emsp;</label>
+            </div>
+            <div style="flex: 5">
+              <input type="radio" name="gender" id="male" />
+              <label for="gender" id="male">Male</label>
+            </div>
+            <div style="flex: 5">
+              <input type="radio" name="gender" id="female" />
+              <label for="gender" id="female">Female</label>
+            </div>
+          </div>
 
+          <div class="form-row">
+            <label for="dantoc">Dan toc:&emsp;</label>
+            <input type="text" id="dantoc" />
+          </div>
+
+          <div class="form-row">
+            <label for="religion">Ton giao:&emsp;</label>
+            <input type="text" id="religion" />
+          </div>
+
+          <div class="form-row">
+            <label for="quoctich">Quoc tich:&emsp;</label>
+            <input type="text" id="quoctich" />
+          </div>
+
+          <div class="form-row">
+            <label for="birthplace">Noi sinh:&emsp;</label>
+            <input type="text" id="birthplace" />
+          </div>
+
+          <div class="form-row">
+            <label for="tnc3">Nam TN cap 3:&emsp;</label>
+            <input type="text" id="tnc3" />
+          </div>
+
+          <div class="form-row">
+            <label for="highschool">Truong cap 3:&emsp;</label>
+            <input type="text" id="highschool" />
+          </div>
+
+          <div class="form-row">
+            <label for="doituong">Doi tuong:&emsp;</label>
+            <input type="text" id="doituong" />
+          </div>
+
+          <div class="form-row">
+            <label for="nID">So CMND/Ho chieu:&emsp;</label>
+            <input type="text" id="nID" />
+          </div>
+
+          <div class="form-row">
+            <label for="issuedate">Ngay cap:&emsp;</label>
+            <input type="text" id="issuedate" />
+          </div>
+
+          <div class="form-row">
+            <label for="issueplace">Noi cap:&emsp;</label>
+            <input type="text" id="issueplace" />
+          </div>
+
+          <div class="form-row">
+            <label for="phonenumber">So dien thoai:&emsp;</label>
+            <input type="text" id="phonenumber" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email:&emsp;</label>
+            <input type="text" id="email" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="maincontainer">
+        <h4 class="header-title">Dia chi hien tai</h4>
+        <hr style="line-height: 1px; width: 100%" />
+
+        <form>
+          <div class="form-row">
+            <label for="thanhpho">Thanh pho:&emsp;</label>
+            <input type="text" id="thanhpho" />
+          </div>
+
+          <div class="form-row">
+            <label for="quan">Quan/Huyen:&emsp;</label>
+            <input type="text" id="quan" />
+          </div>
+
+          <div class="form-row">
+            <label for="xa">Xa/Phuong/TT:&emsp;</label>
+            <input type="text" id="xa" />
+          </div>
+
+          <div class="form-row">
+            <label for="sonha">So nha-duong/thon:&emsp;</label>
+            <input type="text" id="sonha" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="maincontainer">
+        <h4 class="header-title">Ho khau</h4>
+        <hr style="line-height: 1px; width: 100%" />
+
+        <form>
+          <div class="form-row">
+            <label for="thanhpho">Thanh pho:&emsp;</label>
+            <input type="text" id="thanhpho" />
+          </div>
+
+          <div class="form-row">
+            <label for="quan">Quan/Huyen:&emsp;</label>
+            <input type="text" id="quan" />
+          </div>
+
+          <div class="form-row">
+            <label for="xa">Xa/Phuong/TT:&emsp;</label>
+            <input type="text" id="xa" />
+          </div>
+
+          <div class="form-row">
+            <label for="sonha">So nha-duong/thon:&emsp;</label>
+            <input type="text" id="sonha" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="maincontainer">
+        <h4 class="header-title">Thong tin bo</h4>
+        <hr style="line-height: 1px; width: 100%" />
+
+        <form>
+          <div class="form-row">
+            <label for="name">Ho ten:&emsp;</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="form-row">
+            <label for="namsinh">Nam sinh:&emsp;</label>
+            <input type="text" id="namsinh" />
+          </div>
+
+          <div class="form-row">
+            <label for="nghenghiep">Nghe nghiep:&emsp;</label>
+            <input type="text" id="nghenghiep" />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">So dien thoai:&emsp;</label>
+            <input type="text" id="phone" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email:&emsp;</label>
+            <input type="text" id="email" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="maincontainer">
+        <h4 class="header-title">Thong tin me</h4>
+        <hr style="line-height: 1px; width: 100%" />
+
+        <form>
+          <div class="form-row">
+            <label for="name">Ho ten:&emsp;</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="form-row">
+            <label for="namsinh">Nam sinh:&emsp;</label>
+            <input type="text" id="namsinh" />
+          </div>
+
+          <div class="form-row">
+            <label for="nghenghiep">Nghe nghiep:&emsp;</label>
+            <input type="text" id="nghenghiep" />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">So dien thoai:&emsp;</label>
+            <input type="text" id="phone" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email:&emsp;</label>
+            <input type="text" id="email" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>

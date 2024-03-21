@@ -1,60 +1,7 @@
-var info = {
-  student: {
-    fullname: "Bùi Minh Hải Đắc",
-    gender: "Nam",
-    joindate: "2020",
-    major: "Khoa học máy tính 2020",
-    school: "Trường Công nghệ thông tin và Truyền thông",
-    status: "Học",
-    stage: "Đại học đại trà",
-    class: "Khoa học máy tính 05-K65",
-    email: "dac.bmh204525@sis.hust.edu.vn",
-    khoa: "65",
-    curTerm: "20231",
-    gpa: "4.0",
-    tc: "100",
-    tcfailed: "0",
-    eslevel: "4",
-    warning: "M0",
-    dantoc: "KINH",
-    hcgrad: "2020",
-    location: "XÃ KHÁNH CƯ, HUYỆN YÊN KHÁNH, TỈNH NINH BÌNH",
-    viid: "037***-5",
-    issuedate: "25/01/2017",
-    idprovider: "NINH BÌNH",
-    religion: "KHÔNG",
-    highschool: "THPT YÊN KHÁNH B - NINH BÌNH",
-    phone: "0978499362",
-    quoctich: "Viet Nam",
-    birthplace: "Ninh Bình",
-    doituong: "Không có",
-    city: "Ninh Binh",
-    quan: "Yen Khanh",
-    xa: "Khanh Cu",
-    homenumber: "Xóm 3, xã Khánh Cư, huyện Yên Khánh",
-    curcity: "Ninh Binh",
-    curquan: "Yen Khanh",
-    curxa: "Khanh Cu",
-    curhomenumber: "Xóm 3, xã Khánh Cư, huyện Yên Khánh",
-  },
-  father: {
-    name: "BÙI MINH ĐẮC",
-    DoB: "1972",
-    job: "LÀM RUỘNG",
-    phone: "032****97",
-    email: "none",
-  },
-  mother: {
-    name: "ĐẶNG THỊ BÍCH HẢI",
-    DoB: "1980",
-    job: "LÀM RUỘNG",
-    phone: "098****27",
-    email: "none",
-  },
-};
-
-const Index = () => {
-  function setId() {
+var info = {};
+fetch("./info.json")
+  .then((response) => response.json())
+  .then((info) => {
     document.getElementById("student-name").innerHTML = info.student.fullname;
     document.getElementById("gender").innerHTML = info.student.gender;
     document.getElementById("joindate").innerHTML = info.student.joindate;
@@ -93,9 +40,5 @@ const Index = () => {
     document.getElementById("m-job").innerHTML = `${info.mother.job}`;
     document.getElementById("m-phone").innerHTML = `${info.mother.phone}`;
     document.getElementById("m-email").innerHTML = `${info.mother.email}`;
-    return 1;
-  }
-
-  const states = setId();
-};
-Index();
+  })
+  .catch((error) => console.error("Error fetching data:", error));

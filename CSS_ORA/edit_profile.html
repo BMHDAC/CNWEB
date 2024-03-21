@@ -15,7 +15,7 @@
       <div class="maincontainer">
         <h3 class="header-title">Thong tin ca nhan</h3>
         <hr style="line-height: 1px; width: 100%" />
-        <form>
+        <form id="modifier-form">
           <div class="form-row">
             <label for="student-name">Ho va ten:&emsp;</label>
             <input type="text" id="student-name" />
@@ -95,16 +95,9 @@
             <input type="text" id="email" />
           </div>
 
-        </form
-      </div>
-    </section>
+          <h3 class="header-title">Dia chi hien tai</h3>
+          <hr style="line-height: 1px; width: 100%" />
 
-    <section>
-      <div class="maincontainer">
-        <h3 class="header-title">Dia chi hien tai</h4>
-        <hr style="line-height: 1px; width: 100%" />
-
-        <form>
           <div class="form-row">
             <label for="city">Thanh pho:&emsp;</label>
             <input type="text" id="city" />
@@ -124,16 +117,10 @@
             <label for="homenumber">So nha-duong/thon:&emsp;</label>
             <input type="text" id="homenumber" />
           </div>
-        </form>
-      </div>
-    </section>
 
-    <section>
-      <div class="maincontainer">
-        <h3 class="header-title">Ho khau</h4>
-        <hr style="line-height: 1px; width: 100%" />
+          <h3 class="header-title">Ho khau</h3>
+          <hr style="line-height: 1px; width: 100%" />
 
-        <form>
           <div class="form-row">
             <label for="cur-city">Thanh pho:&emsp;</label>
             <input type="text" id="cur-city" />
@@ -153,16 +140,10 @@
             <label for="cur-homenumber">So nha-duong/thon:&emsp;</label>
             <input type="text" id="cur-homenumber" />
           </div>
-        </form>
-      </div>
-    </section>
 
-    <section>
-      <div class="maincontainer">
-        <h3 class="header-title">Thong tin bo</h4>
-        <hr style="line-height: 1px; width: 100%" />
+          <h3 class="header-title">Thong tin bo</h3>
+          <hr style="line-height: 1px; width: 100%" />
 
-        <form>
           <div class="form-row">
             <label for="f-name">Ho ten:&emsp;</label>
             <input type="text" id="f-name" />
@@ -187,16 +168,10 @@
             <label for="f-email">Email:&emsp;</label>
             <input type="text" id="f-email" />
           </div>
-        </form>
-      </div>
-    </section>
 
-    <section>
-      <div class="maincontainer">
-        <h3 class="header-title">Thong tin me</h4>
-        <hr style="line-height: 1px; width: 100%" />
+          <h3 class="header-title">Thong tin me</h3>
+          <hr style="line-height: 1px; width: 100%" />
 
-        <form>
           <div class="form-row">
             <label for="m-name">Ho ten:&emsp;</label>
             <input type="text" id="m-name" />
@@ -221,18 +196,18 @@
             <label for="m-email">Email:&emsp;</label>
             <input type="text" id="m-email" />
           </div>
+
+          <div class="submit-button-container">
+            <button class="submit-button" onclick="location.href='index.html'">
+              OK
+            </button>
+            <button class="cancel-button" onclick="location.href='index.html'">
+              Cancel
+            </button>
+          </div>
         </form>
       </div>
     </section>
-
-    <section>
-      <div class="submit-button-container">
-        <button class="submit-button" onclick="location.href='index.html'">OK</button>
-          <button class="cancel-button" onclick="location.href='index.html'">Cancel</button>
-      </div>
-    </section>
-
-    <script src="./edit_profile.js">
-    </script>
+    <script src="./edit_profile.js"></script>
   </body>
 </html>

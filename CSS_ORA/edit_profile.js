@@ -37,3 +37,30 @@ fetch("./info.json")
     document.getElementById("m-phone").value = `${info.mother.phone}`;
     document.getElementById("m-email").value = `${info.mother.email}`;
   });
+
+document
+  .getElementById("modifier-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const field1Value = document.getElementById("student-name").value;
+    const field2Value = document.getElementById("phone").value;
+    fetch("./info.json")
+      .then((response) => response.json())
+      .then((data) => {
+        data.student.fullname = field1Value;
+        data.student.phone = field2Value;
+        return fetch("./info.json", {
+          method: "PUT", // or 'POST'
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+      })
+      .then(() => {
+        alert("Information updated successfully!");
+        // Redirect to display page
+        window.location.href = "./index.html";
+      })
+      .catch((error) => console.error("Error modifying data:", error));
+  });

@@ -1,7 +1,6 @@
-# How to use this folder
+Chromnium# How to use this folder
 ## First Please Disable CORS in your browser
 I suggest using Firefox, since it is much easier then other Chromnium-based browser.
-1.Type "about:config" in your URL bar
 2.Search for the field called "security.fileuri.strict_origin_policy" and set it to false
 3.Open the "index.html file with Firefox"
 

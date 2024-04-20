@@ -44,7 +44,7 @@ fetch("./info.json")
 
 document
   .getElementById("modifier-form")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", function(event) {
     event.preventDefault();
     var newInfo = {
       student: {

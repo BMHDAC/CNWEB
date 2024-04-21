@@ -106,7 +106,7 @@ document
       .then((data) => {
         data = newInfo;
         return fetch("./info.json", {
-          method: "PUT", // or 'POST'
+          method: "POST", // or 'POST'
           headers: {
             "Content-Type": "application/json",
           },

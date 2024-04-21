@@ -110,6 +110,9 @@ function newData(info) {
       email: document.getElementById("m-email").value || info.mother.email,
     },
   };
+  let fileURL = document.getElementById("myfile").value || "./image.jpg"
+  console.log(fileURL)
+  document.getElementById("profile-image").outerHTML = ` <img id="profile-image" src="${fileURL}" class="profile-image" />`
   reset()
   setData(newInfo)
   console.log(`New data entered in the form(The unfilled form is defaulted to the field in info.json file) : ${JSON.stringify(newInfo)}`)
@@ -136,10 +139,16 @@ function reset() {
   document.getElementById("m-phone").outerHTML = `<p id="m-phone" class="normal-text"></p>`
   document.getElementById("m-email").outerHTML = `<p id="m-email" class="normal-text"></p>`
   document.getElementById("button-container").innerHTML = ""
+  document.getElementById("imgpick").innerHTML = ""
 }
 
+function cancel(info) {
+  reset()
+  setData(info)
+}
 function editModeOn(info) {
 
+  document.getElementById("imgpick").innerHTML += `<label for="myimage">Select an image:</label><input type="file" id="myfile" name="myimage"></input> `
   document.getElementById("button-container").innerHTML += `<button id="ok-button" class="ok-button">OK </button>`
   document.getElementById("button-container").innerHTML += `<button id="cancel-button" class="cancel-button">Cancel </button>`
   document.getElementById("button-container").innerHTML += `<button id="reset-button" class="reset-button">Reset </button>`
@@ -174,10 +183,11 @@ function editModeOn(info) {
     event.preventDefault()
     reset()
     setData(info)
+    document.getElementById("profile-image").outerHTML = `<img id="profile-image" src="image.jpg" class="profile-image" />`
   })
   document.getElementById("cancel-button").addEventListener("click", (event) => {
     event.preventDefault()
-    newData(info)
+    cancel(info)
   })
 }
 

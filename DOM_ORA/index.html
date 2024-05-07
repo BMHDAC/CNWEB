@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="page_header">
+      <h1>Thông tin cá nhân</h1>
+    </div>
+    <div class="main_container" id="main_container">
+      <div id="section">
+        <div class="section_header_container">
+          <h2 class="section_header" id="s0_h">Thông tin sinh viên</h2>
+          <button class="add_group_info_button" id="addG">
+            Add Group Info
+          </button>
+          <button class="add_field_info_button" id="addF">
+            Add Field Info
+          </button>
+          <button class="delete_group_info_button" id="delG">
+            Delete Group
+          </button>
+        </div>
+        <div class="field_container" id="field_container">
+          <div class="row_with_input">
+            <label for="fullname">Họ và tên:&emsp;</label>
+            <input type="text" id="fullname" />
+            <button id="accept" style="background: green">
+              <i class="fa fa-check" style="color: white; padding: 0.1vw"></i>
+            </button>
+            <button id="delete" style="background: red">
+              <i
+                class="material-icons"
+                style="
+                  font-size: 1.5em;
+                  align-self: center;
+                  text-align: center;
+                  color: white;
+                  padding: 0.1vw;
+                "
+                >delete</i
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

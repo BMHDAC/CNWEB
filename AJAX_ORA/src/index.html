@@ -3,23 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <script src="scripts/main.js"></script>
+    <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="bg-black">
+  <body>
+    <div class="flex row justify-center">
+      <h1>Gmail Client</h1>
+    </div>
     <div class="flex flex-row justify-center">
-      <h1 class="text-white text-2xl">Google Email Client</h1>
+      <button
+        class="flex flex-row bg-blue-500 items-center border border-black rounded-full mx-2"
+        id="login_button"
+        onclick="handleAuthClick()"
+      >
+        <img src="./assets/google-icon.png" />
+        Login To Google
+      </button>
+      <button
+        class="flex flex-row bg-blue-500 items-center border border-black mx-2"
+        id="refresh_button"
+        onclick="handleAuthClick()"
+      >
+        Refresh
+      </button>
+      <button
+        class="flex flex-row bg-blue-500 items-center border border-black mx-2"
+        id="logout_button"
+        onclick="handleSignoutClick()"
+      >
+        Logout
+      </button>
     </div>
-    <div class="flex flex-row justify-center items-center w-screen">
-      <div class="justify-start h-fit rounded-full m-10">
-        <button
-          class="flex flex-row items-center bg-blue-300 rounded-full"
-          onclick="googleLogin()"
-        >
-          <img src="assets/google-icon.png" />
-          Sign In Google
-        </button>
+    <div
+      class="flex flex-row justify-end items-center px-24 py-4"
+      id="new_mail"
+    >
+      <div>
+        <p id="error_text" class="text-xl mx-2 text-red-800"></p>
       </div>
+      <button
+        class="bg-blue-300 text-xl border border-b-white rounded-t-xl rounded-b-xl p-2"
+        onclick="createForm()"
+      >
+        New Mail
+      </button>
     </div>
+    <section id="mail_section"></section>
+    <div class="flex flex-row justify-center my-2" id="table_div">
+      <table
+        class="table-fixed text-black border border-white border-collapse w-11/12"
+      >
+        <thead>
+          <tr>
+            <th class="border border-slate-300 table-cell">No.</th>
+            <th class="border border-slate-300 table-cell">Subject</th>
+            <th class="border border-slate-300 table-cell">Date</th>
+            <th class="border border-slate-300 table-cell">Description</th>
+            <th class="border border-slate-300 table-cell">Sender</th>
+            <th class="border border-slate-300 table-cell">Labels</th>
+          </tr>
+        </thead>
+        <tbody id="display_content"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
   </body>
 </html>
